@@ -1,0 +1,61 @@
+(node:798071) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:798967) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}
+    % Define vertices
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (4,0);
+    \coordinate (C) at ($(A)!1!60:(B)$);
+    
+    % Draw triangle
+    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    
+    % Define inner point
+    \coordinate (P) at ($(A)!.4!(C)!.3!(B)$);
+    
+    % Draw perpendiculars
+    \draw[dashed] (P) -- ($(P)!1!270:(A)$) node[below] {$d_1$};
+    \draw[dashed] (P) -- ($(P)!1!210:(B)$) node[left] {$d_2$};
+    \draw[dashed] (P) -- ($(P)!1!330:(C)$) node[right] {$d_3$};
+    
+    % Place point
+    \filldraw (P) circle (2pt) node[above right] {$P$};
+    
+    % Label vertices
+    \node[below left] at (A) {A};
+    \node[below right] at (B) {B};
+    \node[above] at (C) {C};
+\end{tikzpicture}
+
+\end{document}
+
+(node:800012) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+    % Основной корпус машинки
+    \draw[fill=red] (0,0) rectangle (4,1.5);
+    \draw[fill=blue] (1,1.5) rectangle (3,3);
+
+    % Колеса
+    \draw[fill=black] (0.5,-0.5) circle (0.5);
+    \draw[fill=black] (3.5,-0.5) circle (0.5);
+
+    % Окна
+    \draw[fill=white] (1.2,1.7) rectangle (1.8,2.8);
+    \draw[fill=white] (2.2,1.7) rectangle (2.8,2.8);
+
+\end{tikzpicture}
+
+\end{document}
+
